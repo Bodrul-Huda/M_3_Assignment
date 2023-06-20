@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/milligram.css" />
+
+    <title>HomePage</title>
+  </head>
+  <body>
+    <p id="p1" class="class1">This is paragraph 1 will became red</p>
+    <p id="p2" class="class2">This is paragraph 2 will not change color</p>
+    <p id="p3" class="class1">This is paragraph 3 will became red</p>
+    <p id="p4" class="class2">This is paragraph 4 will not change color</p>
+    <p id="p5" class="class1">This is paragraph 5 will became red</p>
+
+    <button onclick="changeStyle()">Change style</button>
+
+    <script>
+      /*
+       13.DOM Query Selector:
+            a. Create a webpage with multiple paragraphs containing different classes and IDs.
+            b. Implement a JavaScript function that selects all paragraphs with a specific class and changes their text color to red.
+        */
+
+      let changeStyle = () => {
+        let addStyle = document.querySelectorAll(".class1");
+
+        for (var i = 0; i < addStyle.length; i++) {
+          addStyle[i].style.color = "red";
+        }
+      };
+    </script>
+  </body>
+</html>

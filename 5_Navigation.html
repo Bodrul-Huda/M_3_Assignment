@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/axios.min.js"></script>
+    <link rel="stylesheet" href="/css/milligram.css" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <p id="version"></p>
+    <p id="bName"></p>
+    <button onclick="browserDetails()">Click to see Browser Details</button>
+    <script>
+      /*
+        5.Navigator Object:
+        a. Write a JavaScript function that detects the user's browser name and version using the navigator object.
+        b. Implement the function to display the user's browser name and version.
+        */
+
+      function browserDetails() {
+        let version = "Version: " + navigator.appVersion;
+        document.getElementById("version").innerHTML = version;
+        let browserName = "Browser Name: " + navigator.userAgent;
+        document.getElementById("bName").innerHTML = browserName;
+      }
+    </script>
+  </body>
+</html>

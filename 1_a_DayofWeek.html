@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/axios.min.js"></script>
+    <link rel="stylesheet" href="/css/milligram.css" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <h4 id="displayDay"></h4>
+
+    <script>
+      /*
+        1.Date Object:
+        1.a. Create a function that takes a date in the format "YYYY-MM-DD" as a parameter and returns the day of the week for that date. The function should use the Date object.
+        */
+
+      function getDayOfWeek(dateString) {
+        let dateParts = dateString.split("-");
+        const year = parseInt(dateParts[0]);
+        const month = parseInt(dateParts[1]) - 1;
+        const day = parseInt(dateParts[2]);
+
+        const date = new Date(year, month, day);
+
+        const dayOfWeek = date.toLocaleDateString(undefined, {
+          weekday: "long",
+        });
+
+        return dayOfWeek;
+      }
+
+      //   const date = "2023-06-18";
+
+      const date = prompt('Insert date as "YYYY-MM-DD", Example "2023-06-18"');
+      const dayOfWeek = getDayOfWeek(date);
+      //   console.log(dayOfWeek);
+      document.getElementById("displayDay").innerHTML = dayOfWeek;
+    </script>
+  </body>
+</html>

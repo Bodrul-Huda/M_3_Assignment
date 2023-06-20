@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/axios.min.js"></script>
+    <link rel="stylesheet" href="/css/milligram.css" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <script>
+      /*
+        3.Numbers:
+        a. Write a JavaScript function that takes a positive integer as input and returns true if it is a prime number, otherwise returns false.
+        */
+
+      function isPrime(number) {
+        if (number <= 1) {
+          return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      /*
+        3.Numbers:
+        b. Implement the function to check if a given positive integer is a prime number.
+        */
+
+      const number = prompt("Insert a positive integer");
+      const result = isPrime(number);
+      alert(result);
+    </script>
+  </body>
+</html>

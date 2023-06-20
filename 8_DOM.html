@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/milligram.css" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <button id="buttonID">Click</button>
+    <p id="paragraphID">This is a paragraph.</p>
+
+    <script>
+      /*
+       8.HTML DOM Document:
+        a. Create a webpage with a button and a paragraph element.
+        b. Implement a JavaScript function that changes the text content of the paragraph element to "Button Clicked!" when the button is clicked.
+
+        */
+      let onButtonClicked = document.getElementById("buttonID");
+      let paraText = document.getElementById("paragraphID");
+
+      onButtonClicked.addEventListener("click", function () {
+        paraText.innerHTML = "Button clicked!";
+      });
+    </script>
+  </body>
+</html>

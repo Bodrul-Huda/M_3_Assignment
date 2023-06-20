@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/axios.min.js"></script>
+    <link rel="stylesheet" href="/css/milligram.css" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <h4>Today is <span id="displayDay"></span></h4>
+
+    <script>
+      /*
+      1.b.Implement the function to display the day of the week for the current date.
+      */
+
+      function getCurrentDayOfWeek() {
+        const currentDate = new Date();
+        const dayOfWeek = currentDate.toLocaleDateString(undefined, {
+          weekday: "long",
+        });
+
+        return dayOfWeek;
+      }
+
+      const currentDay = getCurrentDayOfWeek();
+      // console.log(currentDay);
+      document.getElementById("displayDay").innerHTML = currentDay;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/milligram.css" />
+    <title>HomePage</title>
+  </head>
+  <body onkeydown="getKeyCode(event)">
+    <h1>Press any key on the keyboard</h1>
+
+    <script>
+      /*
+       7.JS Common Events:
+        Implement a webpage with the following functionality:
+        b. When the user presses any key on the keyboard, display an alert with the key code of the pressed key.
+        */
+
+      function getKeyCode(event) {
+        let keyCode = event.keyCode || event.which;
+        alert("Key code: " + keyCode);
+      }
+    </script>
+  </body>
+</html>

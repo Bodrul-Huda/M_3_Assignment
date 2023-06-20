@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/milligram.css" />
+
+    <title>HomePage</title>
+  </head>
+  <body>
+    <div class="container">
+      <h4>List</h4>
+      <ul id="listItem"></ul>
+      <button onclick="dynamicList()">Click to see list</button>
+    </div>
+
+    <script>
+      /*
+       11.Create Element & Append Element:
+          a. Create a webpage with an empty unordered list (<ul>).
+          b. Implement a JavaScript function that dynamically creates five list items (<li>) with sequential numbers (1 to 5) and appends them to the unordered list.
+        */
+
+      function dynamicList() {
+        let ul = document.getElementById("listItem");
+
+        for (let i = 1; i <= 5; i++) {
+          let li = document.createElement("li");
+          li.textContent = i;
+          ul.appendChild(li);
+        }
+      }
+    </script>
+  </body>
+</html>
